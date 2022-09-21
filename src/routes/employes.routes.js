@@ -12,7 +12,7 @@ const route = Router();
 route.get('/', getEmployes);
 route.get('/:id', getEmploye);
 route.post('/', postEmploye);
-route.put('/', putEmploye);
-route.delete('/', deleteEmploye);
+route.put('/:id', putEmploye);
+route.delete('/:id', deleteEmploye);
 
 export default route;

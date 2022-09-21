@@ -1,11 +1,13 @@
 import express from 'express';
 import morgan from 'morgan';
-import employesRoutes from './src/routes/employes.routes.js';
+import employesRoutes from './routes/employes.routes.js';
+import homeRoutes from './routes/index.routes.js';
 const app = express();
 
 app.use(express.json());
 app.use(morgan('dev'));
 
+app.use('/', homeRoutes);
 app.use('/api/employes', employesRoutes);
 
 const PORT = 3000;
